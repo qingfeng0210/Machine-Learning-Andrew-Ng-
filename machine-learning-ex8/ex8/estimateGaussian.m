@@ -23,12 +23,12 @@ sigma2 = zeros(n, 1);
 
 
 
-
-
-
-
-
-
+mu = 1/m*sum(X)';
+temp = zeros(size(X));
+for i=1:m
+	temp(i,:) = (X(i,:) - mu').^2;
+end
+sigma2 = mean(temp)';
 
 % =============================================================
 
